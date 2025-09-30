@@ -7,10 +7,10 @@ namespace Barlang.Models
         [Key]
         public int Id { get; set; }
         public string Nev { get; set; }
-        public int Hossz { get; set; }
-        public int Kiterjedes { get; set; }
-        public int Melyseg { get; set; }
-        public int Magassag { get; set; }
+        public double Hossz { get; set; }
+        public double Kiterjedes { get; set; }
+        public double Melyseg { get; set; }
+        public double Magassag { get; set; }
         public string Telepules { get; set; }
     }
 }

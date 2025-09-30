@@ -1,0 +1,46 @@
+﻿@page
+@model Barlang.Pages.BarlangokTelepulesenkentModel
+@{
+    ViewData["Title"] = "BarlangokTelepulesenkent";
+}
+
+<p>
+    <form method="get">
+        <select asp-for="@Model.KijeloltTelepules">
+            <option value="0">Település: </option>
+            @foreach (var t in Model.Telepulesek)
+            {
+                <option value="@t"></option>
+            }
+        </select>
+        <input type="submit" value="Szures" class="btn btn-primary"/>
+    </form>
+</p>
+
+<table class="table">
+    <tbody>
+        @foreach (var item in Model.Barlangok)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nev)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Hossz)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Kiterjedes)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Melyseg)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Magassag)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telepules)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
