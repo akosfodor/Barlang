@@ -1,0 +1,25 @@
+﻿@page
+@model Barlang.Pages.OsszesitesModel
+@{
+    ViewData["Title"] = "Osszesítés";
+}
+
+<table>
+    <thead>
+        <tr>
+            <th>Település</th>
+            <th>Barlangok száma</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var t in Model.TelepulesOsszesites)
+        {
+            <tr>
+                <td>@t.Telepules</td>
+                <td>@t.BarlangokSzama</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

@@ -6,14 +6,10 @@
 
 <p>
     <form method="get">
-        <select asp-for="@Model.KijeloltTelepules">
-            <option value="0">Település: </option>
-            @foreach (var t in Model.Telepulesek)
-            {
-                <option value="@t"></option>
-            }
+        <select asp-for="@Model.KijeloltTelepules" asp-items="Model.Telepulesek">
+            <option value="">Település: </option>
         </select>
-        <input type="submit" value="Szures" class="btn btn-primary"/>
+        <input type="submit" value="Szűrés" class="btn btn-primary"/>
     </form>
 </p>
 
