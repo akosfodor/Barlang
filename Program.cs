@@ -1,3 +1,7 @@
+using Barlang.Models;
+using Microsoft.EntityFrameworkCore;
+using Barlang.Data;
+
 namespace Barlang
 {
     public class Program
@@ -8,8 +12,12 @@ namespace Barlang
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+            builder.Services.AddDbContext<BarlangDbContext>(
+                options => options.UseSqlite(connectionString: @"Data Source = .\Data\BarlangDb.db")
+            );
 
             var app = builder.Build();
+
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())

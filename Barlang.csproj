@@ -4,6 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>bfa26ecc-ad40-4169-be46-15295ee20082</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,8 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
-    <Folder Include="Models\" />
     <Folder Include="DTOs\" />
   </ItemGroup>
 
